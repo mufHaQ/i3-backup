@@ -1,0 +1,5 @@
+# list of all external config
+
+[i3blocks-battery](https://github.com/kb100/i3blocks-battery)
+[keyindicator](https://github.com/vivien/i3blocks-contrib/tree/master/keyindicator)
+[i3-volume](https://github.com/hastinbe/i3-volume)
