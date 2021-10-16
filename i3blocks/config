@@ -1,0 +1,25 @@
+[time]
+command=date
+interval=1
+
+[battery]
+command=~/.config/i3blocks/i3blocks-battery/battery.py
+markup=pango
+interval=30
+
+[i3volume]
+label=
+command=~/.config/i3blocks/i3-volume/volume output i3blocks
+interval=once
+signal=11
+color=#b8bb26
+separator_block_width=10
+markup=pango
+
+[keyindicator]
+command=~/.config/i3blocks/keyindicator/keyindicator
+markup=pango
+interval=once
+signal=11
+
+
