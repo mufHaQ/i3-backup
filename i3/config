@@ -105,10 +105,10 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Web"
-set $ws2 "2:Terminal"
-set $ws3 "3:VSCode"
-set $ws4 "4:Music"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -190,19 +190,36 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # monitor brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
 # reload status bar if volume button pressed and change value
 bindsym --release XF86AudioRaiseVolume exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release XF86AudioLowerVolume exec pkill -SIGRTMIN+11 i3blocks
 
+# Workspace 1
 assign [class="Brave-browser"] $ws1
-assign [class="Gnome-terminal"] $ws2
-assign [class="Code"] $ws3
-assign [class="Clementine"] $ws4
+# assign [class="Firefox"] $ws1 # Broken, assign in workspace 1, but opened in workspace 2
+assign [class="Google-chrome"] $ws1
 
+# Workspace 2
+assign [class="Clementine"] $ws2
+assign [class="Spotify"] $ws2
 
+# Workspace 3
+assign [class="Gnome-terminal"] $ws3
+
+# Workspace 4
+assign [class="Code"] $ws4
+assign [class="jetbrains-goland"] $ws4
+assign [class="jetbrains-webstorm"] $ws4
+assign [class="jetbrains-datagrip"] $ws4
+assign [class="Gedit"] $ws4
+
+# Workspace 5
+assign [class="discord"] $ws5
+
+exec_always --no-startup-id feh --bg-scale /usr/share/backgrounds/warty-final-ubuntu.png
 
 
 
